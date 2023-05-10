@@ -34,5 +34,6 @@ class Customer:
         return self._coffees
     
     def create_order(self, coffee, price):
-        order_details = {coffee, price}
+        from classes.order import Order
+        order_details = Order(self, coffee, price)
         self.create_order.append(order_details)
